@@ -11,7 +11,8 @@
         {
             "id": 1,
             "userId": 3,
-            "task": "Take out garbage"
+            "task": "Take out garbage",
+            "taskComplete": false
         }
     ],
     "news": [

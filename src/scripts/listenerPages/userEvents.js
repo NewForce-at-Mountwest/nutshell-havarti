@@ -4,8 +4,6 @@ import userApi from "../apiPages/userAPI.js"
 const userEventHandler = {
     loginHandler: () => {
         // select the user log inbutton and add the event listener
-        document.querySelector("#user-login-btn").addEventListener("click", () => {
-            console.log("you got the login handler listener button")
             const userNameValue = document.querySelector("#user-login-input").value
             const passwordValue = document.querySelector("#user-password-input").value
 
@@ -16,9 +14,7 @@ const userEventHandler = {
                 // newsDomMgr.printPage
                 // chatDomMgr.printPage
             })
-
-        })
-    }
+        }
 }
 
 export default userEventHandler

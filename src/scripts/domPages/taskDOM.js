@@ -21,7 +21,7 @@ buildEditTask: () =>{
         document.querySelector("#tasks-container").innerHTML +=
         `<article id="task-list">
         <p></p>
-        <button id="delete-task-btn">Delete</button>
+        <input type= "checkbox" id="delete-task-box">
         <button id="edit-task-btn">Edit</button>
         </article>`
     }
