@@ -29,7 +29,6 @@ const taskObjectToPost = {
                 console.log("you clicked the edit button")
                 //get the task I want to edit from json
                 taskAPIMgr.getSingleTask(singleTaskIdToEdit).then(taskToEdit =>{
-                    debugger
                 //method to print edit task form
                 taskDomMgr.buildEditTask(taskToEdit)
                 console.log(singleTaskIdToEdit)

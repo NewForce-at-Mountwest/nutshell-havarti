@@ -1,7 +1,7 @@
 import userApi from "../apiPages/userAPI.js"
 import newsDomMgr from "../domPages/newsDOM.js"
 import chatDomMgr from "../domPages/chatDOM.js"
-
+import taskDomMgr from "../domPages/taskDOM.js"
 // create event listener for user log in
 const userEventHandler = {
     loginHandler: () => {
