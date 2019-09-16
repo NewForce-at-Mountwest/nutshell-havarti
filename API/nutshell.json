@@ -5,6 +5,24 @@
       "username": "Steve",
       "email": "steve@me.com",
       "password": "Steve"
+    },
+    {
+      "id": 2,
+      "username": "Bob",
+      "email": "bob@me.com",
+      "password": "Bob"
+    },
+    {
+      "id": 3,
+      "username": "Tim",
+      "email": "tim@me.com",
+      "password": "Tim"
+    },
+    {
+      "id": 4,
+      "username": "Phil",
+      "email": "phil@me.com",
+      "password": "Phil"
     }
   ],
   "tasks": [
@@ -12,15 +30,64 @@
       "id": 1,
       "userId": 1,
       "task": "Take out garbage"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "task": "fix the basket"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "task": "wash the car"
+>>>>>>> master
     }
   ],
   "news": [
     {
+<<<<<<< HEAD
       "id": 1,
       "userId": 1,
       "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
       "title": "Wormholes Allow Information to Escape Black Holes",
       "synopsis": "Check out this recent discovery about workholes"
+=======
+      "id": 5,
+      "userId": 1,
+      "url": "https://www.quantamagazine.org",
+      "title": "BIRDS Allow Information to Escape",
+      "synopsis": "Check out this recent discovery"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "url": "https://www.quantamagazine.org",
+      "title": "MAMMOTHS Allow Information to Escape",
+      "synopsis": "Check out this recent discovery"
+    },
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "https://www.quantamagazine.org",
+      "title": "SHARKS Allow Information to Escape",
+      "synopsis": "Check out this recent discovery"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "url": "https://www.quantamagazine.org",
+      "title": "WORMS Allow Information to Escape",
+      "synopsis": "Check out this recent discovery"
+    },
+    {
+      "userId": 3,
+      "url": "www.cow.gov",
+      "title": "COWS",
+      "synopsis": "discovery",
+      "id": 3
+>>>>>>> master
     }
   ],
   "chats": [
@@ -30,9 +97,20 @@
       "message": "What's up?"
     },
     {
+<<<<<<< HEAD
       "userId": null,
       "message": "",
       "id": 2
+=======
+      "id": 2,
+      "userId": 1,
+      "message": "You're cute as a peach in a little red wagon!"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "message": "I know You!"
+>>>>>>> master
     }
   ]
 }
