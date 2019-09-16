@@ -15,7 +15,6 @@ const userEventHandler = {
                 document.querySelector("h1").innerHTML=""
                 document.querySelector("#credential-container").innerHTML=""
                 document.querySelector("h2").innerHTML=`<p>Welcome to Nutshell, ${user[0].username}</p> <button id="logout">Logout</button>`
-                // taskDomMgr.printPage
                 taskDomMgr.buildCreateTask()
                 taskDomMgr.printAllTasks()
                 newsDomMgr.printPage()

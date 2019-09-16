@@ -6,16 +6,17 @@ const chatDomMgr = {
     // Messages to show up in the chat-container div a long with "send" button
     // printing text form to the DOM
     printPage: () => {
+        
         const chatBox = document.querySelector("#chat-container")
         chatApiMgr.chatMessage()
         .then(messageArray => messageArray.forEach(singleMessage=>{
             if(singleMessage.userId === 1){
-                chatBox.innerHTML = `
+                chatBox.innerHTML += `
                 <div id="chat-content">
                 <li>${singleMessage.message}<button id="edit-chat-btn">Edit</button><button id="delete-chat-btn">Delete</button></li>
                 </div>
-                <input type="text" id="chat-input" placeholder="message">
-                <button id="send-chat-btn">Send</button>`
+
+                `
             }
 
         }))

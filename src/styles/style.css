@@ -4,7 +4,13 @@
     }
 
 #tasks-container{
+    display: flex;
  padding: 3em;
  justify-content: space-between;
- flex-direction: row;
+ flex-direction: column;
+ }
+
+ #chat-container{
+     border: 1px solid black;
+     list-style-type: none;
  }

@@ -43,7 +43,7 @@ document.querySelector("#news-container").addEventListener("click", () => {
 document.querySelector("#news-container").addEventListener("click", ()=> {
     if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
 })
-
+//send button handler
 
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
 
