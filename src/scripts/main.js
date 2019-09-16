@@ -19,7 +19,6 @@ document.querySelector("#news-container").addEventListener("click", ()=> {
 })
 
 chatDomMgr.printPage()
-chatDomMgr.editMessageBtn()
-chatDomMgr.printMessage()
 
-document.querySelector("#send-chat-btn").addEventListener("click", chatEvents.sendBtnHandler)
+
+document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)

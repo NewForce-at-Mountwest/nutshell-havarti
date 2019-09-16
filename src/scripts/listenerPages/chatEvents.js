@@ -8,11 +8,11 @@ const chatEvents = {
             console.log("click")
             const messageInput = document.querySelector("#chat-input").value;
             const newMessageObject = {
-                userId: localStorage.getItem("UserId"),
+                userId: 1,
                 message: messageInput,
             }
 
-            chatApiMgr.messageInput(newMessageObject)
+            chatApiMgr.newChatMessage(newMessageObject)
                 .then(chatApiMgr.getAllMessages)
                 .then(incomingMessages => {
                     chatDomMgr.printMessage(incomingMessages)

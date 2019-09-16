@@ -8,7 +8,7 @@ const chatApiMgr = {
     },
     //method to get all messages from the chatApi
     getAllMessages: () => {
-        return fetch(`http://localhost.8088/chats?=userId${localStorage.getItem("userId")}`)
+        return fetch("http://localhost.8088/chats?userId=1")
             .then(response => response.json())
     },
     // method to retrieve a new chat message from the user input field upon send button
