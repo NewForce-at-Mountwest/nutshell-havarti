@@ -5,12 +5,6 @@ import newsEventHandler from "./listenerPages/newsEvents.js"
 // user log in to load at page load
 document.querySelector("#user-login-btn").addEventListener("click", userEventHandler.loginHandler())
 
-chatDomMgr.printPage()
-chatDomMgr.editMessageBtn()
-chatEvents.sendBtnClick()
-chatDomMgr.printMessage()
-
-
 // user log in to load at page load
 document.querySelector("#user-login-btn").addEventListener("click", userEventHandler.loginHandler)
 // user creates new news article
@@ -23,3 +17,9 @@ document.querySelector("#news-container").addEventListener("click", ()=> {
 document.querySelector("#news-container").addEventListener("click", ()=> {
     if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
 })
+
+chatDomMgr.printPage()
+chatDomMgr.editMessageBtn()
+chatDomMgr.printMessage()
+
+document.querySelector("#send-chat-btn").addEventListener("click", chatEvents.sendBtnHandler)
