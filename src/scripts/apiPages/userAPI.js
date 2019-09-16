@@ -2,7 +2,7 @@
 
 const userApi = {
     getOneUserByUsername: (username) =>{
-        return fetch(`http://localhost:3000/users?username=${username}`)
+        return fetch(`http://localhost:8088/users?username=${username}`)
         .then(response => response.json())
     }
 }
