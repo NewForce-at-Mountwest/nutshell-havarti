@@ -1,7 +1,7 @@
 import userApi from "../apiPages/userAPI.js"
 import newsDomMgr from "../domPages/newsDOM.js"
 import chatDomMgr from "../domPages/chatDOM.js"
-
+import taskDomMgr from "../domPages/taskDOM.js"
 // create event listener for user log in
 const userEventHandler = {
     loginHandler: () => {
@@ -16,6 +16,8 @@ const userEventHandler = {
                 document.querySelector("#credential-container").innerHTML=""
                 document.querySelector("h2").innerHTML=`<p>Welcome to Nutshell, ${user[0].username}</p> <button id="logout">Logout</button>`
                 // taskDomMgr.printPage
+                taskDomMgr.buildCreateTask()
+                taskDomMgr.printAllTasks()
                 newsDomMgr.printPage()
                 chatDomMgr.printPage()
             })

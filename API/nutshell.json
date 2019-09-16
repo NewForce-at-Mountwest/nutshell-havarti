@@ -29,7 +29,21 @@
     {
       "id": 1,
       "userId": 1,
-      "task": "Take out garbage"
+      "task": "Take out garbage",
+      "taskComplete": false
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "task": "make dinner",
+      "dueDate": "2019-09-20",
+      "taskComplete": false,
+      "id": 13
     },
     {
       "id": 2,
@@ -40,9 +54,23 @@
       "id": 3,
       "userId": 1,
       "task": "wash the car"
+    },
+    {
+      "userId": 1,
+      "task": "",
+      "dueDate": "",
+      "taskComplete": false,
+      "id": 14
     }
   ],
   "news": [
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about workholes"
+    },
     {
       "id": 5,
       "userId": 1,
