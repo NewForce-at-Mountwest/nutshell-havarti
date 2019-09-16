@@ -1,10 +1,26 @@
-#main-container{
+#main-container {
     display: flex;
-    flex-direction: row
-    }
+    flex-direction: row;
+    padding-left: 5%
+}
 
-#tasks-container{
- padding: 3em;
- justify-content: space-between;
- flex-direction: row;
- }
+#tasks-container {
+    padding: 1em;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 30%
+}
+
+#news-container {
+    padding: 1em;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 40%
+}
+
+#chat-container {
+    padding: 1em;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 30%
+}
