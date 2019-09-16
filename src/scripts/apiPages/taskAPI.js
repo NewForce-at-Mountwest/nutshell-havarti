@@ -12,7 +12,7 @@ postOneTask: singleTaskObject =>{
       },
     // method to fetch one task to edit and add in user log in local storage
 getSingleTask: singleTaskId =>{
-    return fetch(`http://localhost:3000/tasks/${singleTaskId}`).then(response =>
+    return fetch(`http://localhost:3000/tasks?userId=${localStorage.getItem("userId")}${singleTaskId}`).then(response =>
     response.json()
     )},
     // method to fetch all tasks from db
