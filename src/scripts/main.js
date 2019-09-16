@@ -27,18 +27,13 @@ document.querySelector("#news-container").addEventListener("click", () => {
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsEditBtn")) {newsEventHandler.newsEditArticleHandler()}
 })
-<<<<<<< HEAD
 document.querySelector("#news-container").addEventListener("click", ()=> {
     if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
 })
 
-chatDomMgr.printPage()
-
 
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
-=======
 
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-editArticle-btn")) {newsEventHandler.putEditedArticleHandler()}
 })
->>>>>>> master

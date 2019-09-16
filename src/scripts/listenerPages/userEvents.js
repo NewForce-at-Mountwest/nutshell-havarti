@@ -1,5 +1,6 @@
 import userApi from "../apiPages/userAPI.js"
 import newsDomMgr from "../domPages/newsDOM.js"
+import chatDomMgr from "../domPages/chatDOM.js"
 
 // create event listener for user log in
 const userEventHandler = {
@@ -16,7 +17,7 @@ const userEventHandler = {
                 document.querySelector("h2").innerHTML=`<p>Welcome to Nutshell, ${user[0].username}</p> <button id="logout">Logout</button>`
                 // taskDomMgr.printPage
                 newsDomMgr.printPage()
-                // chatDomMgr.printPage
+                chatDomMgr.printPage()
             })
     }
 }
