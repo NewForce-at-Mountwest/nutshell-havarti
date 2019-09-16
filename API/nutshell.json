@@ -44,14 +44,14 @@
   ],
   "news": [
     {
-      "id": 1,
+      "id": 5,
       "userId": 1,
       "url": "https://www.quantamagazine.org",
       "title": "BIRDS Allow Information to Escape",
       "synopsis": "Check out this recent discovery"
     },
     {
-      "id": 1,
+      "id": 4,
       "userId": 1,
       "url": "https://www.quantamagazine.org",
       "title": "MAMMOTHS Allow Information to Escape",
