@@ -37,14 +37,6 @@ document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsDeleteBtn")) { newsEventHandler.newsDeleteArticleHandler() }
 })
 
-document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("newsEditBtn")) { newsEventHandler.newsEditArticleHandler() }
-})
-document.querySelector("#news-container").addEventListener("click", ()=> {
-    if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
-})
-
-
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
 
 document.querySelector("#news-container").addEventListener("click", () => {
