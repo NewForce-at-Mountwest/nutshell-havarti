@@ -2,7 +2,7 @@
 const taskAPIMgr = {
     // method to put new task in json db change to only show log in to local storage
 postOneTask: singleTaskObject =>{
-           return fetch("http://localhost:3000/tasks", {
+           return fetch("http://localhost:8088/tasks", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -12,12 +12,12 @@ postOneTask: singleTaskObject =>{
       },
     // method to fetch one task to edit and add in user log in local storage
 getSingleTask: singleTaskId =>{
-    return fetch(`http://localhost:3000/tasks?userId=${localStorage.getItem("userId")}${singleTaskId}`).then(response =>
+    return fetch(`http://localhost:8088/tasks?userId=1&id=${singleTaskId.id}`).then(response =>
     response.json()
     )},
     // method to fetch all tasks from db
 getAllTasks: () =>{
-    return fetch(`http://localhost:3000/tasks?userId=${localStorage.getItem("userId")}`).then(response=>
+    return fetch("http://localhost:8088/tasks").then(response=>
     response.json())
     // need if statement here to only return tasks that are false for taskComplete key
 },

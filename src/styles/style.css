@@ -1,0 +1,10 @@
+#main-container{
+    display: flex;
+    flex-direction: row
+    }
+
+#tasks-container{
+ padding: 3em;
+ justify-content: space-between;
+ flex-direction: row;
+ }

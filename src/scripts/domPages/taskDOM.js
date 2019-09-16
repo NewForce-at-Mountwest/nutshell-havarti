@@ -1,5 +1,6 @@
+import taskApi from "../apiPages/taskAPI.js"
+import taskAPIMgr from "../apiPages/taskAPI.js"
 // create Dom print manager to print create task form and task list upon user log in
-
 const taskDomMgr = {
     // method to build a task and save it to the list on DOM
 buildCreateTask: () =>{
@@ -10,21 +11,25 @@ buildCreateTask: () =>{
 },
 
 // method to build edit form when a user needs to edit a task in the task list
-buildEditTask: () =>{
+buildEditTask: (taskToEdit) =>{
     document.querySelector("#tasks-container").innerHTML= `
-    <input type="text" id="task-edit-input" placeholder="Task">
-    <input type="date" name="" id="task-date-edit" placeholder="Due Date">
-    <button id="save-edit-task-btn">Save</button>`
+    <input type="text" id="task-edit-input-${taskToEdit.id}" placeholder="${taskToEdit.task}">
+    <input type="date" name="" id="task-date-edit-${taskToEdit.id}" placeholder="${taskToEdit.dueDate}">
+    <button id="save-edit-task-btn-${taskToEdit.id}">Save</button>`
 },
     // method to print task list to DOM upon log in
     printAllTasks:() =>{
+        taskAPIMgr.getAllTasks()
+            .then(taskArray=>taskArray.forEach(taskItem => {
+                if (taskItem.userId === 1){
         document.querySelector("#tasks-container").innerHTML +=
         `<article id="task-list">
-        <p></p>
-        <input type= "checkbox" id="delete-task-box">
-        <button id="edit-task-btn">Edit</button>
+        <p>${taskItem.task} ${taskItem.dueDate}</p>
+        <input type= "checkbox" id="delete-task-box-${taskItem.id}">
+        <button id="edit-task-btn-${taskItem.id}">Edit</button>
         </article>`
     }
+}))
+    }
 }
-
 export default taskDomMgr

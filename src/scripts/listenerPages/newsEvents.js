@@ -22,8 +22,7 @@ const newsEventHandler = {
     // delete selected article
     newsDeleteArticleHandler: () => {
         console.log("you clicked delete")
-        
-    }
+          }
 }
 
 export default newsEventHandler;
