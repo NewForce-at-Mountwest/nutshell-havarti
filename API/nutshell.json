@@ -30,8 +30,6 @@
       "id": 1,
       "userId": 1,
       "task": "Take out garbage"
-<<<<<<< HEAD
-=======
     },
     {
       "id": 2,
@@ -42,18 +40,10 @@
       "id": 3,
       "userId": 1,
       "task": "wash the car"
->>>>>>> master
     }
   ],
   "news": [
     {
-<<<<<<< HEAD
-      "id": 1,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
-=======
       "id": 5,
       "userId": 1,
       "url": "https://www.quantamagazine.org",
@@ -87,7 +77,6 @@
       "title": "COWS",
       "synopsis": "discovery",
       "id": 3
->>>>>>> master
     }
   ],
   "chats": [
@@ -97,11 +86,6 @@
       "message": "What's up?"
     },
     {
-<<<<<<< HEAD
-      "userId": null,
-      "message": "",
-      "id": 2
-=======
       "id": 2,
       "userId": 1,
       "message": "You're cute as a peach in a little red wagon!"
@@ -110,7 +94,6 @@
       "id": 3,
       "userId": 1,
       "message": "I know You!"
->>>>>>> master
     }
   ]
 }
