@@ -1,6 +1,6 @@
 import userApi from "../apiPages/userAPI.js"
 import newsDomMgr from "../domPages/newsDOM.js"
-import taskDomMgr from "../domPages/taskDOM.js"
+import chatDomMgr from "../domPages/chatDOM.js"
 
 // create event listener for user log in
 const userEventHandler = {
@@ -19,7 +19,7 @@ const userEventHandler = {
                 taskDomMgr.buildCreateTask()
                 taskDomMgr.printAllTasks()
                 newsDomMgr.printPage()
-                // chatDomMgr.printPage
+                chatDomMgr.printPage()
             })
     }
 }
