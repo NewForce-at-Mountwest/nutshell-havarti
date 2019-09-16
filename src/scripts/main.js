@@ -1,4 +1,6 @@
 import userEventHandler from "./listenerPages/userEvents.js"
+import chatDomMgr from "./domPages/chatDOM.js"
+import chatEvents from "./listenerPages/chatEvents.js"
 import newsEventHandler from "./listenerPages/newsEvents.js"
 import newsApi from "./apiPages/newsAPI.js"
 import newsDomMgr from "./domPages/newsDOM.js"
@@ -25,6 +27,12 @@ document.querySelector("#news-container").addEventListener("click", () => {
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsEditBtn")) {newsEventHandler.newsEditArticleHandler()}
 })
+document.querySelector("#news-container").addEventListener("click", ()=> {
+    if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
+})
+
+
+document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
 
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-editArticle-btn")) {newsEventHandler.putEditedArticleHandler()}
