@@ -21,7 +21,7 @@ const newsApi = {
   }),
 //   edit an article
 editArticle: (id, article) => {
-    return fetch(`http://localhost:8088/news/${id}`, {
+    return fetch("http://localhost:8088/news/${id}", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
