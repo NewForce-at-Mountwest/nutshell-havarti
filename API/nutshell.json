@@ -27,10 +27,11 @@
   ],
   "tasks": [
     {
-      "id": 1,
       "userId": 1,
-      "task": "Take out garbage",
-      "taskComplete": false
+      "task": "take out garbage",
+      "dueDate": "2019-09-22",
+      "taskComplete": false,
+      "id": 1
     },
     {
       "id": 11
@@ -40,15 +41,17 @@
     },
     {
       "userId": 1,
-      "task": "make dinner",
-      "dueDate": "2019-09-20",
+      "task": "make mac and cheese",
+      "dueDate": "2019-09-21",
       "taskComplete": false,
       "id": 13
     },
     {
-      "id": 2,
       "userId": 1,
-      "task": "fix the basket"
+      "task": "make the thing",
+      "dueDate": "",
+      "taskComplete": false,
+      "id": 2
     },
     {
       "id": 3,
@@ -61,6 +64,13 @@
       "dueDate": "",
       "taskComplete": false,
       "id": 14
+    },
+    {
+      "userId": 1,
+      "task": "",
+      "dueDate": "",
+      "taskComplete": false,
+      "id": 15
     }
   ],
   "news": [

@@ -12,7 +12,7 @@ postOneTask: singleTaskObject =>{
       },
     // method to fetch one task to edit and add in user log in local storage
 getSingleTask: singleTaskId =>{
-    return fetch(`http://localhost:8088/tasks?userId=1&id=${singleTaskId.id}`).then(response =>
+    return fetch(`http://localhost:8088/tasks?userId=1&id=${singleTaskId}`).then(response =>
     response.json()
     )},
     // method to fetch all tasks from db
@@ -21,6 +21,15 @@ getAllTasks: () =>{
     response.json())
     // need if statement here to only return tasks that are false for taskComplete key
 },
+postOneEditedTask: (id,oneEditedTaskObject) =>{
+  return fetch(`http://localhost:8088/tasks/${id}`, {
+ method: "PUT",
+ headers: {
+   "Content-Type": "application/json"
+ },
+ body: JSON.stringify(oneEditedTaskObject)
+})
+}
 }
 
 export default taskAPIMgr
