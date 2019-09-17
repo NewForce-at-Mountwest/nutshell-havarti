@@ -13,13 +13,13 @@ const newsDomMgr = {
                         `<div id="news-Container">
                         <button id="newsNewArticleBtn">New Article</button>
                         <article id="newsNewArticleForm"></article>
-                        <div id="newsArticlesContainer">
+                        <div id="newsArticlesContainer-${newsArticle.id}">
                         <h5>${newsArticle.title}</h5>
                         <p>${newsArticle.synopsis}</p>
                         <p>${newsArticle.url}</p>
-                        <button id="newsEditBtn">Edit</button>
+                        <button id="newsEditBtn-${newsArticle.id}">Edit</button>
                         <article id="editNewArticleForm"></article>
-                        <button id="newsDeleteBtn">Delete</button>
+                        <button id="newsDeleteBtn-${newsArticle.id}">Delete</button>
                         </div>
                         </div>`
                 }
