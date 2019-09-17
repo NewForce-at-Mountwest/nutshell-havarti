@@ -13,7 +13,7 @@ const taskDomMgr = {
     printAllTasks: () => {
         taskAPIMgr.getAllTasks()
             .then(taskArray => taskArray.forEach(taskItem => {
-                if (taskItem.userId === 1 && taskItem.taskComplete === false) {
+                if (taskItem.userId === localStorage.getItem("userId") && taskItem.taskComplete === false) {
                     document.querySelector("#tasks-container").innerHTML +=
                         `<div id="task-list-${taskItem.id}">
         <p>${taskItem.task} ${taskItem.dueDate}</p>

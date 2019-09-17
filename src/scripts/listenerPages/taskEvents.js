@@ -9,7 +9,7 @@ const taskEventMgr = {
         const taskInputValue = document.querySelector("#task-input").value
         const taskDueDateValue = document.querySelector("#task-date-input").value
         const taskObjectToPost = {
-            "userId": 1,
+            "userId": localStorage.getItem("userId"),
             "task": taskInputValue,
             "dueDate": taskDueDateValue,
             "taskComplete": false
@@ -62,7 +62,7 @@ const taskEventMgr = {
         const taskEditDueDateValue = document.querySelector(`#task-date-edit-${singleSaveId}`).value
         console.log(taskEditDueDateValue)
         const taskEditObjectToPost = {
-            "userId": 1,
+            "userId": localStorage.getItem("userId"),
             "task": taskEditInputValue,
             "dueDate": taskEditDueDateValue,
             "taskComplete": false

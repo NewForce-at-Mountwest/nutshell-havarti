@@ -64,14 +64,6 @@
       "id": 1
     },
     {
-      "id": 11,
-      "taskComplete": false
-    },
-    {
-      "id": 12,
-      "taskComplete": false
-    },
-    {
       "userId": 1,
       "task": "make mac and cheese",
       "dueDate": "2019-09-21",
@@ -84,12 +76,6 @@
       "dueDate": "2019-09-22",
       "taskComplete": "true",
       "id": 2
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "task": "wash the car",
-      "taskComplete": "true"
     },
     {
       "userId": 1,
@@ -169,7 +155,7 @@
       "id": 24
     },
     {
-      "userId": 1,
+      "userId": "1",
       "task": "feed cat",
       "dueDate": "2019-09-23",
       "taskComplete": false,
@@ -181,6 +167,62 @@
       "dueDate": "2019-09-22",
       "taskComplete": false,
       "id": 26
+    },
+    {
+      "userId": "9",
+      "task": "feed the fish twice",
+      "dueDate": "2019-09-15",
+      "taskComplete": "true",
+      "id": 27
+    },
+    {
+      "userId": "9",
+      "task": "make soups",
+      "dueDate": "2019-09-25",
+      "taskComplete": false,
+      "id": 28
+    },
+    {
+      "userId": "1",
+      "task": "check tasks list",
+      "dueDate": "2019-09-16",
+      "taskComplete": false,
+      "id": 29
+    },
+    {
+      "userId": "2",
+      "task": "pick up my car now",
+      "dueDate": "2019-09-22",
+      "taskComplete": false,
+      "id": 30
+    },
+    {
+      "userId": "2",
+      "task": "go to the pharmacy",
+      "dueDate": "2019-09-22",
+      "taskComplete": "true",
+      "id": 31
+    },
+    {
+      "userId": "9",
+      "task": "make pizza",
+      "dueDate": "2019-09-15",
+      "taskComplete": false,
+      "id": 32
+    },
+    {
+      "userId": "1",
+      "task": "make a cake",
+      "dueDate": "2019-09-23",
+      "taskComplete": false,
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "task": "get job",
+      "dueDate": "2019-09-15",
+      "taskComplete": false,
+      "id": 34
     }
   ],
   "news": [
@@ -211,6 +253,13 @@
       "title": "Aminals",
       "synopsis": "the other living things",
       "id": 7
+    },
+    {
+      "userId": 1,
+      "url": "friends.com",
+      "title": "All about friends",
+      "synopsis": "things about the show",
+      "id": 8
     }
   ],
   "chats": [
