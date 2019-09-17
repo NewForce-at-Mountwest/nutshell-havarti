@@ -1,4 +1,3 @@
-import taskApi from "../apiPages/taskAPI.js"
 import taskAPIMgr from "../apiPages/taskAPI.js"
 // create Dom print manager to print create task form and task list upon user log in
 const taskDomMgr = {
@@ -14,7 +13,7 @@ const taskDomMgr = {
     printAllTasks: () => {
         taskAPIMgr.getAllTasks()
             .then(taskArray => taskArray.forEach(taskItem => {
-                if (taskItem.userId === 1) {
+                if (taskItem.userId === 1 && taskItem.taskComplete === false) {
                     document.querySelector("#tasks-container").innerHTML +=
                         `<div id="task-list-${taskItem.id}">
         <p>${taskItem.task} ${taskItem.dueDate}</p>

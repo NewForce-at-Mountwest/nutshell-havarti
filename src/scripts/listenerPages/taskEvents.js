@@ -15,11 +15,15 @@ const taskEventMgr = {
             "taskComplete": false
         }
         //post created task to json db
-        taskAPIMgr.postOneTask(taskObjectToPost)
-        // clear create task input fields
+        taskAPIMgr.postOneTask(taskObjectToPost).then(allTasks =>{
+        // clear create task input fields and container
         document.querySelector("#task-input").value = "";
+        document.querySelector("#tasks-container").innerHTML = ""
         // return and print updated task list to DOM
-        taskAPIMgr.getAllTasks()
+        taskAPIMgr.getAllTasks(allTasks)
+        taskDomMgr.printAllTasks()
+        taskDomMgr.buildCreateTask();
+        })
     },
     // event listener for edit task button
     editTaskEvent: () => {
@@ -34,17 +38,19 @@ const taskEventMgr = {
         })
     },
     // event listener for delete task checkbox
-    deleteTaskEvent: () => {
-        document.querySelector("#tasks-container").addEventListener("click", () => {
-            if (event.target.id.includes("delete-task")) {
-                event.target.id.split("-")[3]
+    markCompleteTaskEvent: () => {
+                const taskId= event.target.id.split("-")[3]
                 console.log("you clicked delete!")
-                // api manager to mark a task complete
-                // call method to return only incomplete tasks
+                // create api patch method to change key value pair, completeatsk to true
+                taskAPIMgr.markTaskComplete(taskId)
+                document.querySelector("#task-input").value = "";
+                // return and print updated task list to DOM
+                taskAPIMgr.getAllTasks().then(allTasks =>{
+                    taskDomMgr.printAllTasks(allTasks);
+                    taskDomMgr.buildCreateTask()
+                })
 
-            }
-        })
-    },
+        },
     // event listener for save edit button
     saveEditTaskEvent: () => {
         const saveButtonArray = event.target.id.split("-")
@@ -65,7 +71,6 @@ const taskEventMgr = {
         taskAPIMgr.postOneEditedTask(singleSaveId, taskEditObjectToPost).then(() => {
             // clear dom to bring back updated task list
             document.querySelector("#tasks-container").innerHTML = ""
-
             taskAPIMgr.getAllTasks().then(alltasks => {
                 // call method to return all tasks that are incomplete
                 taskDomMgr.printAllTasks(alltasks);
