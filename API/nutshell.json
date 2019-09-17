@@ -65,32 +65,11 @@
   ],
   "news": [
     {
-      "id": 1,
       "userId": 1,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org",
-      "title": "BIRDS Allow Information to Escape",
-      "synopsis": "Check out this recent discovery"
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org",
-      "title": "MAMMOTHS Allow Information to Escape",
-      "synopsis": "Check out this recent discovery"
-    },
-    {
-      "id": 1,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org",
-      "title": "SHARKS Allow Information to Escape",
-      "synopsis": "Check out this recent discovery"
+      "url": "bite.com",
+      "title": "SHARKS",
+      "synopsis": "Bite",
+      "id": 1
     },
     {
       "id": 2,
@@ -105,6 +84,27 @@
       "title": "COWS",
       "synopsis": "discovery",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "url": "www.aminals.net",
+      "title": "Aminals",
+      "synopsis": "bite",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "url": "www.cow.gov",
+      "title": "COWS",
+      "synopsis": "the other living things",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "url": "www.travel.net",
+      "title": "FLEAS",
+      "synopsis": "travel a lot",
+      "id": 6
     }
   ],
   "chats": [

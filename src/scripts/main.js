@@ -48,5 +48,8 @@ document.querySelector("#news-container").addEventListener("click", ()=> {
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
 
 document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("news-editArticle-btn")) {newsEventHandler.putEditedArticleHandler()}
+    if (event.target.id.includes("#newsEditBtn")) (newsEventHandler.newsEditArticleHandler())
+})
+document.querySelector("#news-container").addEventListener("click", () => {
+    if (event.target.id.includes("news-editArticle-btn")) (newsEventHandler.putEditedArticleHandler())
 })
