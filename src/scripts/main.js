@@ -45,4 +45,9 @@ document.querySelector("#news-container").addEventListener("click", () => {
 document.querySelector("#user-registration").addEventListener("click", userEventHandler.registerHandler)
 // save a new registered user
 document.querySelector("body").addEventListener("click", () => {
-    if (event.target.id.includes("user-save-reg-btn")) (userEventHandler.registerNew)})
+    if (event.target.id.includes("user-save-reg-btn")) (userEventHandler.registerNew())
+})
+// logout button
+document.querySelector("body").addEventListener("click", () => {
+    if (event.target.id.includes("logout")) (userEventHandler.logout())
+})

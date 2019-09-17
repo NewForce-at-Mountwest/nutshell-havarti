@@ -21,11 +21,14 @@ const userEventHandler = {
             chatDomMgr.printPage()
         })
     },
+    clearRegDom: () => {
+        document.querySelector("#registerForm").innerHTML =""
+    },
     registerHandler: () => {
         document.querySelector("#credential-container").innerHTML = "<h3>Register your Nutshell account here!</h3>"
         document.querySelector("#registerForm").innerHTML = `<div id="register">
         <input type="text" name="user-name" id="user-login-input" placeholder="user name">
-        <input type="text" name="user-email" id="user-email-input" placeholder="user name">
+        <input type="text" name="user-email" id="user-email-input" placeholder="email">
         <input type="text" name="password" id="user-password-input" placeholder="password">
         <button id= "user-save-reg-btn">Register</button></div>`
     },
@@ -41,6 +44,10 @@ const userEventHandler = {
         }
         userApi.addUser(newUserObject)
             .then(userEventHandler.loginHandler)
+            .then(userEventHandler.clearRegDom)
+    },
+    logout: () => {
+        window.location.href = "http://localhost:8080"
     }
 }
 
