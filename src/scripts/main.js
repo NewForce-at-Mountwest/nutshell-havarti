@@ -20,36 +20,29 @@ document.querySelector("body").addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("save-task-btn")) { taskEventMgr.saveEditTaskEvent() }
 })
-
+// bring up fields to input new article
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsNewArticleBtn")) { newsEventHandler.newsNewArticleHandler() }
 })
-
-document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("newsEditBtn")) { newsEventHandler.newsEditArticleHandler() }
-})
-
+// post new article to json server
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-saveArticle-btn")) { newsEventHandler.postNewArticleHandler() }
 })
-
-document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("newsDeleteBtn")) { newsEventHandler.newsDeleteArticleHandler() }
-})
-
+// bring up edit form to edit an existing article
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsEditBtn")) { newsEventHandler.newsEditArticleHandler() }
 })
-document.querySelector("#news-container").addEventListener("click", ()=> {
-    if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
-})
-
-
-document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
-
+// click to delete an article
 document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("#newsEditBtn")) (newsEventHandler.newsEditArticleHandler())
+    if (event.target.id.includes("newsDeleteBtn")) { newsEventHandler.newsDeleteArticleHandler() }
 })
+document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
+// save newly edited news article to json server
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-editArticle-btn")) (newsEventHandler.putEditedArticleHandler())
 })
+// bring up register new user form
+document.querySelector("#user-registration").addEventListener("click", userEventHandler.registerHandler)
+// save a new registered user
+document.querySelector("body").addEventListener("click", () => {
+    if (event.target.id.includes("user-save-reg-btn")) (userEventHandler.registerNew)})

@@ -65,13 +65,6 @@
   ],
   "news": [
     {
-      "userId": 1,
-      "url": "bite.com",
-      "title": "SHARKS",
-      "synopsis": "Bite",
-      "id": 1
-    },
-    {
       "id": 2,
       "userId": 2,
       "url": "https://www.quantamagazine.org",
@@ -87,15 +80,8 @@
     },
     {
       "userId": 1,
-      "url": "www.aminals.net",
-      "title": "Aminals",
-      "synopsis": "bite",
-      "id": 4
-    },
-    {
-      "userId": 1,
       "url": "www.cow.gov",
-      "title": "COWS",
+      "title": "COWSSSSSS",
       "synopsis": "the other living things",
       "id": 5
     },
