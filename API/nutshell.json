@@ -57,40 +57,130 @@
   ],
   "tasks": [
     {
-      "id": 1,
       "userId": 1,
-      "task": "Take out garbage",
+      "task": "take out garbage",
+      "dueDate": "2019-09-22",
+      "taskComplete": "true",
+      "id": 1
+    },
+    {
+      "id": 11,
       "taskComplete": false
     },
     {
-      "id": 11
-    },
-    {
-      "id": 12
+      "id": 12,
+      "taskComplete": false
     },
     {
       "userId": 1,
-      "task": "make dinner",
-      "dueDate": "2019-09-20",
-      "taskComplete": false,
+      "task": "make mac and cheese",
+      "dueDate": "2019-09-21",
+      "taskComplete": "true",
       "id": 13
     },
     {
-      "id": 2,
       "userId": 1,
-      "task": "fix the basket"
+      "task": "make the dinner",
+      "dueDate": "2019-09-22",
+      "taskComplete": "true",
+      "id": 2
     },
     {
       "id": 3,
       "userId": 1,
-      "task": "wash the car"
+      "task": "wash the car",
+      "taskComplete": "true"
     },
     {
       "userId": 1,
       "task": "",
       "dueDate": "",
-      "taskComplete": false,
+      "taskComplete": "true",
       "id": 14
+    },
+    {
+      "userId": 1,
+      "task": "",
+      "dueDate": "",
+      "taskComplete": "true",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "task": "vacuum the hall",
+      "dueDate": "2019-09-17",
+      "taskComplete": "true",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "task": "vacuum the hallway",
+      "dueDate": "2019-09-19",
+      "taskComplete": "true",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "task": "workout",
+      "dueDate": "2019-09-19",
+      "taskComplete": false,
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "task": "do laundry",
+      "dueDate": "2019-09-21",
+      "taskComplete": false,
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "task": "eat lunch",
+      "dueDate": "2019-09-21",
+      "taskComplete": "true",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "task": "go to the cleaners",
+      "dueDate": "2019-09-22",
+      "taskComplete": "true",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "task": "make dinner",
+      "dueDate": "2019-09-25",
+      "taskComplete": false,
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "task": "dance party",
+      "dueDate": "2019-09-24",
+      "taskComplete": false,
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "task": "feed dog",
+      "dueDate": "2019-09-22",
+      "taskComplete": false,
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "task": "feed cat",
+      "dueDate": "2019-09-23",
+      "taskComplete": false,
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "task": "buy stuff",
+      "dueDate": "2019-09-22",
+      "taskComplete": false,
+      "id": 26
     }
   ],
   "news": [

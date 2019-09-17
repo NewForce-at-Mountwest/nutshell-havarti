@@ -20,7 +20,11 @@ document.querySelector("body").addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("save-task-btn")) { taskEventMgr.saveEditTaskEvent() }
 })
-// bring up fields to input new article
+// call task complete event handler at click of task complete checkbox
+document.querySelector("body").addEventListener("click", () => {
+    if (event.target.id.includes("delete-task-box")) { taskEventMgr.markCompleteTaskEvent() }
+})
+
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsNewArticleBtn")) { newsEventHandler.newsNewArticleHandler() }
 })
