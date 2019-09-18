@@ -28,6 +28,7 @@ const newsEventHandler = {
             }
             )
     },
+    // edit item on server
     putEditedArticleHandler: () => {
         const articleIdToPut = event.target.id.split("-")[3]
         const editedTitleValue = document.querySelector("#news-editTitle-input").value
@@ -53,6 +54,7 @@ const newsEventHandler = {
             .then(newsApi.printArticles)
             .then(newsDomMgr.printPage)
     },
+    // create new article and send to server
     postNewArticleHandler: () => {
         const newTitle = document.querySelector("#news-newTitle-input").value
         const newSynopsis = document.querySelector("#news-newSynopsis-input").value

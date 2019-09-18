@@ -11,8 +11,8 @@ const userEventHandler = {
 
         // collect username input value and password value at the click
         userApi.getOneUserByUsername(userNameValue).then(user => {
-            console.log(user[0].username)
-            console.log(user[0].password, passwordValue);
+            // console.log(user[0].username)
+            // console.log(user[0].password, passwordValue);
             if (user[0].password === passwordValue) {
                 localStorage.setItem("userId", user[0].id)
                 document.querySelector("h1").innerHTML = ""
@@ -27,7 +27,8 @@ const userEventHandler = {
                 // Error handling would go here
                 alert("Incorrect password");
             }
-        })
+        }
+        )
     },
     clearRegDom: () => {
         document.querySelector("#registerForm").innerHTML = ""
@@ -55,8 +56,8 @@ const userEventHandler = {
         userApi.addUser(newUserObject)
             .then(userEventHandler.loginHandler)
             .then(userEventHandler.clearRegDom)
-            // if email already exists produce error message "the email already exists"
-            // else
+        // if email already exists produce error message "the email already exists"
+        // else
     },
     logout: () => {
         window.location.href = "http://localhost:8080"
@@ -64,3 +65,12 @@ const userEventHandler = {
 }
 
 export default userEventHandler
+
+
+
+
+// .then(
+//     userApi.getAllUsers().then(usernames.forEach(username => {
+//         if (user[0].username === username.username) {
+// )
+// } else { alert("Please register a new account") }
