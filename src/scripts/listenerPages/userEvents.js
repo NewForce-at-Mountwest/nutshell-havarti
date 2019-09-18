@@ -43,9 +43,13 @@ const userEventHandler = {
             "email": newEmail,
             "password": newPassword
         }
+        // check all users in json for duplicate email address
+        // if email does not already exist register new user
         userApi.addUser(newUserObject)
             .then(userEventHandler.loginHandler)
             .then(userEventHandler.clearRegDom)
+            // if email already exists produce error message "the email already exists"
+            // else
     },
     logout: () => {
         window.location.href = "http://localhost:8080"

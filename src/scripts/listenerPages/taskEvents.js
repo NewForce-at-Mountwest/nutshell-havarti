@@ -18,7 +18,7 @@ const taskEventMgr = {
         taskAPIMgr.postOneTask(taskObjectToPost).then(allTasks =>{
         // clear create task input fields and container
         document.querySelector("#task-input").value = "";
-        document.querySelector("#tasks-container").innerHTML = ""
+        document.querySelector("#tasks-output-container").innerHTML = ""
         // return and print updated task list to DOM
         taskAPIMgr.getAllTasks(allTasks)
         taskDomMgr.printAllTasks()
@@ -45,6 +45,7 @@ const taskEventMgr = {
                 taskAPIMgr.markTaskComplete(taskId)
                 document.querySelector("#task-input").value = "";
                 // return and print updated task list to DOM
+                document.querySelector("#tasks-output-container").innerHTML=""
                 taskAPIMgr.getAllTasks().then(allTasks =>{
                     taskDomMgr.printAllTasks(allTasks);
                     taskDomMgr.buildCreateTask()
@@ -70,7 +71,7 @@ const taskEventMgr = {
         // call method to return edited task to json db
         taskAPIMgr.postOneEditedTask(singleSaveId, taskEditObjectToPost).then(() => {
             // clear dom to bring back updated task list
-            document.querySelector("#tasks-container").innerHTML = ""
+            document.querySelector("#tasks-output-container").innerHTML = ""
             taskAPIMgr.getAllTasks().then(alltasks => {
                 // call method to return all tasks that are incomplete
                 taskDomMgr.printAllTasks(alltasks);
