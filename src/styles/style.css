@@ -24,3 +24,11 @@
     flex-direction: column;
     width: 30%
 }
+
+#newsTime{
+    font-size: 60%;
+}
+
+#registerForm{
+    margin-left: -112%
+}
