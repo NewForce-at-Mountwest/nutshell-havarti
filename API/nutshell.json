@@ -59,6 +59,12 @@
       "email": "jen@myemail.com",
       "password": "jenn",
       "id": 10
+    },
+    {
+      "username": "bill",
+      "email": "bill@bill.com",
+      "password": "bill",
+      "id": 11
     }
   ],
   "tasks": [
@@ -333,19 +339,74 @@
   ],
   "chats": [
     {
-      "id": 1,
-      "userId": 1,
-      "message": "What's up?"
+      "userId": null,
+      "message": "red pandaefefef",
+      "id": 11
     },
     {
-      "id": 2,
-      "userId": 1,
-      "message": "You're cute as a peach in a little red wagon!"
+      "userId": null,
+      "message": "monkey",
+      "id": 12
     },
     {
-      "id": 3,
+      "userId": null,
+      "message": "rogers",
+      "id": 13
+    },
+    {
+      "userId": null,
+      "message": "harry",
+      "id": 14
+    },
+    {
+      "userId": null,
+      "message": "great weathe",
+      "id": 22
+    },
+    {
       "userId": 1,
-      "message": "I know You!"
+      "message": "yo",
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "message": "rgrgrgrgrgrg",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "message": "efefefef",
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "message": "efefefef",
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "message": "roger",
+      "id": 27
+    },
+    {
+      "userId": "1",
+      "message": "monkey",
+      "id": 29
+    },
+    {
+      "userId": 1,
+      "message": "freshest",
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "message": "hey",
+      "id": 31
+    },
+    {
+      "userId": 11,
+      "message": "bye",
+      "id": 32
     }
   ]
 }

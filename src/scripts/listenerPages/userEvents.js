@@ -22,6 +22,7 @@ const userEventHandler = {
                 taskDomMgr.printAllTasks()
                 newsDomMgr.printPage()
                 chatDomMgr.printPage()
+                chatDomMgr.printOnLogin()
             } else {
                 // Error handling would go here
                 alert("Incorrect password");

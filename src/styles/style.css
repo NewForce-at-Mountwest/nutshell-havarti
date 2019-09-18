@@ -19,6 +19,7 @@
 }
 
 #chat-container {
+    /* border: 1px solid black; */
     padding: 1em;
     justify-content: space-evenly;
     flex-direction: column;
