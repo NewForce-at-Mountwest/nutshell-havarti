@@ -16,21 +16,24 @@ const newsEventHandler = {
     newsEditArticleHandler: () => {
         const articleToEdit = event.target.id.split("-")[1]
         newsApi.getSingleArticle(articleToEdit)
-            .then(articleToEditForm =>
+            .then(articleToEditForm => {
                 document.querySelector(`#editNewArticleForm-${articleToEdit}`).innerHTML = (`
                     <input type="text" name="title" id="news-editTitle-input" value="${articleToEditForm[0].title}"></input>
-                    <input id="newsTime" value=${articleToEditForm[0].time}></input>
+                    <input id="newsTime-edit" value=${articleToEditForm[0].time}></input>
                     <input type="text" name="synopsis" id="news-editSynopsis-input" value="${articleToEditForm[0].synopsis}"></input>
                     <input type="url" name="url" id="news-editUrl-input" value="${articleToEditForm[0].url}"></input>
                     <button id= "news-editArticle-btn-${articleToEditForm[0].id}">Save</button>`
-                ))
+                )
+
+            }
+            )
     },
     putEditedArticleHandler: () => {
         const articleIdToPut = event.target.id.split("-")[3]
         const editedTitleValue = document.querySelector("#news-editTitle-input").value
         const editedSynopsisValue = document.querySelector("#news-editSynopsis-input").value
         const editedUrlValue = document.querySelector("#news-editUrl-input").value
-        const newsTimeStamp = document.querySelector("#newsTime").value
+        const newsTimeStamp = document.querySelector("#newsTime-edit").value
         const editedNewsObject =
         {
             "userId": 1,
