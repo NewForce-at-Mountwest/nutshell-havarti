@@ -11,7 +11,7 @@ const newsDomMgr = {
                         <div id="newsOutput"></div>`
         newsApi.printArticles()
             .then(newsArray=>newsArray.forEach(newsArticle => {
-                if (newsArticle.userId === 1) {
+                if (newsArticle.userId === localStorage.getItem("userId")) {
                     document.querySelector("#newsOutput").innerHTML +=
                         `<div id="news-Container">
                         <div id="newsArticlesContainer-${newsArticle.id}">

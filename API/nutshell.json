@@ -185,26 +185,43 @@
   ],
   "news": [
     {
-      "id": 2,
-      "userId": 2,
+      "userId": "2",
       "url": "https://www.quantamagazine.org",
       "title": "WORMS Allow Information to Escape",
-      "synopsis": "Check out this recent discovery"
+      "synopsis": "Check out this recent discovery",
+      "time": "853pm",
+      "id": 2
     },
     {
-      "userId": 3,
+      "userId": "3",
       "url": "www.cow.gov",
       "title": "COWS",
       "synopsis": "discovery",
       "id": 3
     },
     {
-      "userId": 1,
-      "url": "www.travel.net",
+      "userId": "1",
+      "url": "www.travel.com",
       "title": "Travel More",
       "synopsis": "travel a lot",
       "time": "2019-09-18T14:45:22.219Z",
       "id": 8
+    },
+    {
+      "userId": "1",
+      "url": "www.aminals.net",
+      "title": "Aminals",
+      "synopsis": "discovery",
+      "time": "2019-09-18T14:56:31.189Z",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "url": "www.aminals.net",
+      "title": "Travel More",
+      "synopsis": "minimize your trash-print",
+      "time": "2019-09-18T15:09:16.994Z",
+      "id": 10
     }
   ],
   "chats": [

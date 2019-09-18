@@ -36,7 +36,7 @@ const newsEventHandler = {
         const newsTimeStamp = document.querySelector("#newsTime-edit").value
         const editedNewsObject =
         {
-            "userId": 1,
+            "userId": localStorage.getItem("userId"),
             "url": editedUrlValue,
             "title": editedTitleValue,
             "synopsis": editedSynopsisValue,
@@ -60,7 +60,7 @@ const newsEventHandler = {
         const time = new Date();
         const newNewsObject =
         {
-            "userId": 1,
+            "userId": localStorage.getItem("userId"),
             "url": newUrl,
             "title": newTitle,
             "synopsis": newSynopsis,

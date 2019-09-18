@@ -1,7 +1,7 @@
 // Fetch all News Articles
 const newsApi = {
     printArticles: () =>{
-        return fetch("http://localhost:8088/news?_sort=date&_order=desc")
+        return fetch(`http://localhost:8088/news?userId=${localStorage.getItem("userId")}&_sort=date&_order=desc`)
         .then(response => response.json())
     },
 // Post a New News Article
@@ -31,7 +31,7 @@ editArticle: (id, article) => {
   },
 // Get a single news article
   getSingleArticle: (id) => {
-    return fetch(`http://localhost:8088/news?userId=1&id=${id}`)
+    return fetch(`http://localhost:8088/news?userId=${localStorage.getItem("userId")}&id=${id}`)
     .then(response => response.json())
   }
 }
