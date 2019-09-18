@@ -24,7 +24,7 @@ document.querySelector("body").addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("delete-task-box")) { taskEventMgr.markCompleteTaskEvent() }
 })
-
+// form to create a new article
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsNewArticleBtn")) { newsEventHandler.newsNewArticleHandler() }
 })

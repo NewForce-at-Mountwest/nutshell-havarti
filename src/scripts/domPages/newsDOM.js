@@ -5,12 +5,14 @@ import newsEventHandler from "../listenerPages/newsEvents.js"
 const newsDomMgr = {
     printPage: () => {
         const newsBox = document.querySelector("#news-container")
-        newsBox.innerHTML=`<h3>News Articles</h3>
+        // prints container heading, new article button and new article form fields
+        newsBox.innerHTML = `<h3>News Articles</h3>
                         <button id="newsNewArticleBtn">New Article</button>
                         <article id="newsNewArticleForm"></article>
                         <div id="newsOutput"></div>`
+        // print content of articles to DOM output container
         newsApi.printArticles()
-            .then(newsArray=>newsArray.forEach(newsArticle => {
+            .then(newsArray => newsArray.forEach(newsArticle => {
                 if (newsArticle.userId === localStorage.getItem("userId")) {
                     document.querySelector("#newsOutput").innerHTML +=
                         `<div id="news-Container">

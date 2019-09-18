@@ -1,16 +1,17 @@
+/* position main sections in a row */
 #main-container {
     display: flex;
     flex-direction: row;
     padding-left: 5%
 }
-
+/* each container's contents are in columns */
 #tasks-container {
     padding: 1em;
     justify-content: space-evenly;
     flex-direction: column;
     width: 30%
 }
-
+/* container spacing */
 #news-container {
     padding: 1em;
     justify-content: space-evenly;
@@ -24,4 +25,12 @@
     justify-content: space-evenly;
     flex-direction: column;
     width: 30%
+}
+/* time stamp small font */
+#newsTime{
+    font-size: 60%;
+}
+/* position register form to left of screen */
+#registerForm{
+    margin-left: -112%
 }
