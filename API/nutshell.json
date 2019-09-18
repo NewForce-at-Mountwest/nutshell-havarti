@@ -275,38 +275,59 @@
   ],
   "news": [
     {
-      "id": 2,
-      "userId": 2,
-      "url": "https://www.quantamagazine.org",
-      "title": "WORMS Allow Information to Escape",
-      "synopsis": "Check out this recent discovery"
+      "userId": "2",
+      "url": "https://www.cnn.com/2019/09/18/us/tropical-storm-jerry-wednesday-wxc/index.html",
+      "title": "Tropical Storm Jerry",
+      "synopsis": "This storm could cause some excessive damage to our southern coast. All should take cover.",
+      "time": "2019-09-18T17:01:35.338Z",
+      "id": 2
     },
     {
-      "userId": 3,
-      "url": "www.cow.gov",
-      "title": "COWS",
-      "synopsis": "discovery",
+      "userId": "3",
+      "url": "https://www.cnn.com/2019/09/18/us/tropical-storm-jerry-wednesday-wxc/index.html",
+      "title": "Tropical Storm Jerry",
+      "synopsis": "This storm could cause some excessive damage to our southern coast. All should take cover.",
+      "time": "2019-09-18T17:01:35.338Z",
       "id": 3
     },
     {
-      "userId": 1,
-      "url": "www.cow.gov",
-      "title": "COWS",
-      "synopsis": "the other living things",
+      "userId": "1",
+      "url": "https://www.cnn.com/2019/09/18/us/tropical-storm-jerry-wednesday-wxc/index.html",
+      "title": "Tropical Storm Jerry",
+      "synopsis": "This storm could cause some excessive damage to our southern coast. All should take cover.",
+      "time": "2019-09-18T17:01:35.338Z",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "url": "https://www.cnn.com/2019/09/18/africa/liberia-boarding-school-fire/index.html",
+      "title": "School Fire",
+      "synopsis": "26 children die as fire breaks out in Liberia boarding school",
+      "time": "2019-09-18T17:02:15.590Z",
       "id": 5
     },
     {
-      "userId": 1,
-      "url": "www.aminals.net",
-      "title": "Aminals",
-      "synopsis": "the other living things",
+      "userId": "1",
+      "url": "https://www.cnn.com/2019/09/17/politics/trump-graham-iran-tweet-weakness/index.html",
+      "title": "Iran Response",
+      "synopsis": "Trump rebuts Graham: My response to Iran 'was a sign of strength'",
+      "time": "2019-09-18T17:03:00.791Z",
+      "id": 6
+    },
+    {
+      "userId": "1",
+      "url": "https://www.cnn.com/2019/09/18/investing/hasbro-toys-ceo-brian-goldner/index.html",
+      "title": "Hasbro Comeback",
+      "synopsis": "How Hasbro managed a stunning comeback in a post-Toys-'R'-Us world",
+      "time": "2019-09-18T17:04:05.413Z",
       "id": 7
     },
     {
-      "userId": 1,
-      "url": "friends.com",
-      "title": "All about friends",
-      "synopsis": "things about the show",
+      "userId": "1",
+      "url": "https://www.cnn.com/2019/09/18/us/veterans-facility-removes-director/index.html",
+      "title": "VA ALF",
+      "synopsis": "VA puts regional director on leave after veteran found covered in ants at assisted-living facility",
+      "time": "2019-09-18T17:04:58.498Z",
       "id": 8
     }
   ],
