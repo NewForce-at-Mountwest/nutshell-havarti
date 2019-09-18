@@ -20,35 +20,32 @@ document.querySelector("body").addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("save-task-btn")) { taskEventMgr.saveEditTaskEvent() }
 })
+// call task complete event handler at click of task complete checkbox
+document.querySelector("body").addEventListener("click", () => {
+    if (event.target.id.includes("delete-task-box")) { taskEventMgr.markCompleteTaskEvent() }
+})
 
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsNewArticleBtn")) { newsEventHandler.newsNewArticleHandler() }
 })
-
-document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("newsEditBtn")) { newsEventHandler.newsEditArticleHandler() }
-})
-
+// post new article to json server
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-saveArticle-btn")) { newsEventHandler.postNewArticleHandler() }
 })
-
-document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("newsDeleteBtn")) { newsEventHandler.newsDeleteArticleHandler() }
-})
-
+// bring up edit form to edit an existing article
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("newsEditBtn")) { newsEventHandler.newsEditArticleHandler() }
 })
-document.querySelector("#news-container").addEventListener("click", ()=> {
-    if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
+// click to delete an article
+document.querySelector("#news-container").addEventListener("click", () => {
+    if (event.target.id.includes("newsDeleteBtn")) { newsEventHandler.newsDeleteArticleHandler() }
 })
 //send button handler to print each message upon click
 
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
-
+// save newly edited news article to json server
 document.querySelector("#news-container").addEventListener("click", () => {
-    if (event.target.id.includes("news-editArticle-btn")) {newsEventHandler.putEditedArticleHandler()}
+    if (event.target.id.includes("news-editArticle-btn")) (newsEventHandler.putEditedArticleHandler())
 })
 
 // delete button handler to delete a chat message from the DOM and Api
@@ -56,3 +53,13 @@ document.querySelector("body").addEventListener("click", chatEvents.deleteMsgHan
 
 // edit button for chat messages showing the edit chat field on click
 document.querySelector("body").addEventListener("click", chatEvents.editChatHandler)
+// bring up register new user form
+document.querySelector("#user-registration").addEventListener("click", userEventHandler.registerHandler)
+// save a new registered user
+document.querySelector("body").addEventListener("click", () => {
+    if (event.target.id.includes("user-save-reg-btn")) (userEventHandler.registerNew())
+})
+// logout button
+document.querySelector("body").addEventListener("click", () => {
+    if (event.target.id.includes("logout")) (userEventHandler.logout())
+})
