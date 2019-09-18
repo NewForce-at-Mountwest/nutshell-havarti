@@ -16,25 +16,31 @@ const newsEventHandler = {
     newsEditArticleHandler: () => {
         const articleToEdit = event.target.id.split("-")[1]
         newsApi.getSingleArticle(articleToEdit)
-            .then(articleToEditForm =>
-                document.querySelector("#editNewArticleForm").innerHTML = (`
+            .then(articleToEditForm => {
+                document.querySelector(`#editNewArticleForm-${articleToEdit}`).innerHTML = (`
                     <input type="text" name="title" id="news-editTitle-input" value="${articleToEditForm[0].title}"></input>
+                    <input id="newsTime-edit" value=${articleToEditForm[0].time}></input>
                     <input type="text" name="synopsis" id="news-editSynopsis-input" value="${articleToEditForm[0].synopsis}"></input>
                     <input type="url" name="url" id="news-editUrl-input" value="${articleToEditForm[0].url}"></input>
                     <button id= "news-editArticle-btn-${articleToEditForm[0].id}">Save</button>`
-                ))
+                )
+
+            }
+            )
     },
     putEditedArticleHandler: () => {
         const articleIdToPut = event.target.id.split("-")[3]
         const editedTitleValue = document.querySelector("#news-editTitle-input").value
         const editedSynopsisValue = document.querySelector("#news-editSynopsis-input").value
         const editedUrlValue = document.querySelector("#news-editUrl-input").value
+        const newsTimeStamp = document.querySelector("#newsTime-edit").value
         const editedNewsObject =
         {
-            "userId": 1,
+            "userId": localStorage.getItem("userId"),
             "url": editedUrlValue,
             "title": editedTitleValue,
-            "synopsis": editedSynopsisValue
+            "synopsis": editedSynopsisValue,
+            "time": newsTimeStamp
         }
         newsApi.editArticle(articleIdToPut, editedNewsObject)
             .then(newsApi.printArticles)
@@ -51,12 +57,14 @@ const newsEventHandler = {
         const newTitle = document.querySelector("#news-newTitle-input").value
         const newSynopsis = document.querySelector("#news-newSynopsis-input").value
         const newUrl = document.querySelector("#news-newUrl-input").value
+        const time = new Date();
         const newNewsObject =
         {
-            "userId": 1,
+            "userId": localStorage.getItem("userId"),
             "url": newUrl,
             "title": newTitle,
-            "synopsis": newSynopsis
+            "synopsis": newSynopsis,
+            "time": time
         }
         newsApi.postNewArticle(newNewsObject)
             .then(newsApi.printArticles)
