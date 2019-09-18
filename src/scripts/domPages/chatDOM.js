@@ -8,25 +8,39 @@ const chatDomMgr = {
     printPage: () => {
         const chatBox = document.querySelector("#chat-container")
         chatApiMgr.chatMessage()
-        .then(messageArray => messageArray.forEach(singleMessage=>{
-            if(singleMessage.userId === 1){
-                chatBox.innerHTML = `
-                <div id="chat-content">
-                <li>${singleMessage.message}<button id="edit-chat-btn">Edit</button><button id="delete-chat-btn">Delete</button></li>
-                </div>
-                <input type="text" id="chat-input" placeholder="message">
+            .then(messageArray => messageArray.forEach(singleMessage => {
+                if (singleMessage.userId === parseInt(localStorage.getItem("userId") )){
+                    chatBox.innerHTML += `
+                    <p id="one-line">${singleMessage.message}<button id="edit-chat-btn-${singleMessage.id}">Edit</button><button id="delete-chat-btn-${singleMessage.id}">Delete</button></p>
+                    `
+                }else {chatBox.innerHTML += `
+                <p id="one-line">${singleMessage.message}</p>
+                `}
+            }))
+    },
+    //div to print on login holding the chat input field and send btn. created input container for messages
+    printOnLogin: () => {
+        document.querySelector("#chat-container").innerHTML = `<h3> Chat </h3>
+        <div id="chat-content">
+</div>
+<input type="text" id="chat-input" placeholder="message">
                 <button id="send-chat-btn">Send</button>`
-            }
-
-        }))
     },
     // print chat messages in an unordered list with edit button attached
     printMessage: () => {
         // target chat-input id, send button on click prints to chat container as a <ul>
         const chatInput = document.querySelector("#chat-input").value;
-        document.querySelector("#chat-content").innerHTML = chatInput
+        const timeStamp = new Date()
+        document.querySelector("#chat-content").innerHTML = `${chatInput} <br> ${timeStamp}`
 
+    },
+    // form for edit field after edit button is clicked
+    chatEditForm: (editChatObject) => {
+            document.querySelector("#one-line").innerHTML = `
+        <input type="text" id="edit-input-${editChatObject.id}" value="${editChatObject.message}">
+        <button id="edit-save-btn-${editChatObject.id}">Save</button>`
     }
+
 }
 // Showing username next to the message w/ time stamp
 

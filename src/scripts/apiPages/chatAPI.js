@@ -6,9 +6,13 @@ const chatApiMgr = {
         return fetch("http://localhost:8088/chats")
             .then(response => response.json())
     },
+    getOneMessage: (id)=> {
+        return fetch(`http://localhost:8088/chats/${id}`)
+        .then(response=>response.json())
+    },
     //method to get all messages from the chatApi
     getAllMessages: () => {
-        return fetch("http://localhost.8088/chats?userId=1")
+        return fetch("http://localhost:8088/chats")
             .then(response => response.json())
     },
     // method to retrieve a new chat message from the user input field upon send button
@@ -27,16 +31,16 @@ const chatApiMgr = {
             method: "DELETE"
         }),
     // method to edit a message in the chatApi
-    editChat: (id, chatMsg) => {
+    editChat: (id, chatEditObject) => {
         return fetch(`http://localhost:8088/chats/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(chatMsg)
-        });
+            body: JSON.stringify(chatEditObject)
+        })
     }
 
-}
+};
 
 export default chatApiMgr
