@@ -5,6 +5,10 @@ const userApi = {
         return fetch(`http://localhost:8088/users?username=${username}`)
             .then(response => response.json())
     },
+    getAllUsers: () => {
+        return fetch("http://localhost:8088/users")
+        .then(response => response.json())
+    },
     addUser: (newUserObject) => {
         return fetch("http://localhost:8088/users", {
             method: "POST",
