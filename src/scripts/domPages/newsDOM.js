@@ -5,20 +5,22 @@ import newsEventHandler from "../listenerPages/newsEvents.js"
 const newsDomMgr = {
     printPage: () => {
         const newsBox = document.querySelector("#news-container")
-        newsBox.innerHTML=""
+        newsBox.innerHTML=`<h3>News Articles</h3>
+                        <button id="newsNewArticleBtn">New Article</button>
+                        <article id="newsNewArticleForm"></article>
+                        <div id="newsOutput"></div>`
         newsApi.printArticles()
             .then(newsArray=>newsArray.forEach(newsArticle => {
                 if (newsArticle.userId === 1) {
-                    newsBox.innerHTML +=
+                    document.querySelector("#newsOutput").innerHTML +=
                         `<div id="news-Container">
-                        <button id="newsNewArticleBtn">New Article</button>
-                        <article id="newsNewArticleForm"></article>
                         <div id="newsArticlesContainer-${newsArticle.id}">
                         <h5>${newsArticle.title}</h5>
+                        <p id="newsTime">Time: ${newsArticle.time}</p>
                         <p>${newsArticle.synopsis}</p>
                         <p>${newsArticle.url}</p>
                         <button id="newsEditBtn-${newsArticle.id}">Edit</button>
-                        <article id="editNewArticleForm"></article>
+                        <article id="editNewArticleForm-${newsArticle.id}"></article>
                         <button id="newsDeleteBtn-${newsArticle.id}">Delete</button>
                         </div>
                         </div>`
