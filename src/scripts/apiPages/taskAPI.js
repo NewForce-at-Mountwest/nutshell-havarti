@@ -12,13 +12,13 @@ const taskAPIMgr = {
   },
   // method to fetch one task to edit and add in user log in local storage
   getSingleTask: singleTaskId => {
-    return fetch(`http://localhost:8088/tasks?userId=1&id=${singleTaskId}`).then(response =>
+    return fetch(`http://localhost:8088/tasks?userId=${localStorage.getItem("userId")}&id=${singleTaskId}`).then(response =>
       response.json()
     )
   },
   // method to fetch all tasks from db
   getAllTasks: () => {
-    return fetch("http://localhost:8088/tasks").then(response =>
+    return fetch(`http://localhost:8088/tasks?userId=${localStorage.getItem("userId")}`).then(response =>
       response.json())
     // need if statement here to only return tasks that are false for taskComplete key
   },

@@ -12,6 +12,7 @@ const userEventHandler = {
         // collect username input value and password value at the click
         userApi.getOneUserByUsername(userNameValue).then(user => {
             console.log(user[0].username)
+<<<<<<< HEAD
             console.log(user[0].password, passwordValue);
             if (user[0].password === passwordValue) {
                 localStorage.setItem("userId", user[0].id)
@@ -26,6 +27,16 @@ const userEventHandler = {
                 // Error handling would go here
                 alert("Incorrect password");
             }
+=======
+            localStorage.setItem("userId", user[0].id);
+            document.querySelector("h1").innerHTML = ""
+            document.querySelector("#credential-container").innerHTML = ""
+            document.querySelector("h2").innerHTML = `<p>Welcome to Nutshell, ${user[0].username}</p> <button id="logout">Logout</button>`
+            taskDomMgr.buildCreateTask()
+            taskDomMgr.printAllTasks()
+            newsDomMgr.printPage()
+            chatDomMgr.printPage()
+>>>>>>> master
         })
     },
     clearRegDom: () => {
@@ -49,9 +60,13 @@ const userEventHandler = {
             "email": newEmail,
             "password": newPassword
         }
+        // check all users in json for duplicate email address
+        // if email does not already exist register new user
         userApi.addUser(newUserObject)
             .then(userEventHandler.loginHandler)
             .then(userEventHandler.clearRegDom)
+            // if email already exists produce error message "the email already exists"
+            // else
     },
     logout: () => {
         window.location.href = "http://localhost:8080"

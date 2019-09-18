@@ -3,7 +3,7 @@ import taskAPIMgr from "../apiPages/taskAPI.js"
 const taskDomMgr = {
     // method to build a task and save it to the list on DOM
     buildCreateTask: () => {
-        document.querySelector("#tasks-container").innerHTML = `
+        document.querySelector("#tasks-input-container").innerHTML = `
         <h3>Create a New Task</h3>
             <input type="text" id="task-input" placeholder="Task">
         <input type="date" name="" id="task-date-input" placeholder="Due Date">
@@ -13,8 +13,8 @@ const taskDomMgr = {
     printAllTasks: () => {
         taskAPIMgr.getAllTasks()
             .then(taskArray => taskArray.forEach(taskItem => {
-                if (taskItem.userId === 1 && taskItem.taskComplete === false) {
-                    document.querySelector("#tasks-container").innerHTML +=
+                if (taskItem.userId === localStorage.getItem("userId") && taskItem.taskComplete === false) {
+                    document.querySelector("#tasks-output-container").innerHTML +=
                         `<div id="task-list-${taskItem.id}">
         <p>${taskItem.task} ${taskItem.dueDate}</p>
         <input type= "checkbox" id="delete-task-box-${taskItem.id}">

@@ -55,3 +55,4 @@ document.querySelector("body").addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("logout")) (userEventHandler.logout())
 })
+
