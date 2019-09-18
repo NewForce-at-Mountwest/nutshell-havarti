@@ -43,10 +43,16 @@ document.querySelector("#news-container").addEventListener("click", () => {
 document.querySelector("#news-container").addEventListener("click", ()=> {
     if (event.target.id.includes("newsDeleteBtn")){newsEventHandler.newsDeleteArticleHandler}
 })
-//send button handler
+//send button handler to print each message upon click
 
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
 
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-editArticle-btn")) {newsEventHandler.putEditedArticleHandler()}
 })
+
+// delete button handler to delete a chat message from the DOM and Api
+document.querySelector("body").addEventListener("click", chatEvents.deleteMsgHandler)
+
+// edit button for chat messages showing the edit chat field on click
+document.querySelector("body").addEventListener("click", chatEvents.editChatHandler)

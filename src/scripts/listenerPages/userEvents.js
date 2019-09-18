@@ -18,6 +18,7 @@ const userEventHandler = {
                 taskDomMgr.buildCreateTask()
                 taskDomMgr.printAllTasks()
                 newsDomMgr.printPage()
+                chatDomMgr.printOnLogin()
                 chatDomMgr.printPage()
             })
     }
