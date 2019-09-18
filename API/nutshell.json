@@ -59,6 +59,12 @@
       "email": "jen@myemail.com",
       "password": "jenn",
       "id": 10
+    },
+    {
+      "username": "bill",
+      "email": "bill@bill.com",
+      "password": "bill",
+      "id": 11
     }
   ],
   "tasks": [

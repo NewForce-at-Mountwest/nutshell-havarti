@@ -16,7 +16,8 @@ const chatDomMgr = {
     },
     //div to print on login holding the chat input field and send btn. created input container for messages
     printOnLogin: () => {
-        document.querySelector("#chat-container").innerHTML = `<div id="chat-content">
+        document.querySelector("#chat-container").innerHTML = `<h3> Chat </h3>
+        <div id="chat-content">
 </div>
 <input type="text" id="chat-input" placeholder="message">
                 <button id="send-chat-btn">Send</button>`
