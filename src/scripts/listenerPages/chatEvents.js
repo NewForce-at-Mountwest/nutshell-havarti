@@ -31,28 +31,34 @@ const chatEvents = {
                 })
         }
     },
+    //click event handler for edit message button
     editChatHandler: () => {
         if (event.target.id.includes("edit-chat-btn")) {
             console.log("edit click")
-            const editArray = event.target.id.split("-")
-            const editMsgId = editArray[3]
-            //get single chat msg
-            //then print form
-            chatDomMgr.chatEditForm()
-            //go in 2nd click event
+            const editArray = event.target.id.split("-");
+            const editMsgId = editArray[3];
 
-            const editedChatInputValue = document.querySelector("#chat-input").value;
-
-
+            chatApiMgr.getOneMessage(editMsgId)
+                .then(singleEdit => {
+                    chatDomMgr.chatEditForm(singleEdit)
+                })
+        }
+    },
+    //go in 2nd click event
+    //second click event for save edit button
+    editChatSaveHandler: () => {
+        if (event.target.id.includes("edit-save-btn")) {
+            const editArray = event.target.id.split("-");
+            const editMsgId = editArray[3];
+            const editedChatInputValue = document.querySelector(`#edit-input-${editMsgId}`).value;
             const editedChatObject = {
-                userId: 1,
+                userId: localStorage.getItem("userId"),
                 message: editedChatInputValue,
             }
             chatApiMgr.editChat(editMsgId, editedChatObject)
-                .then(() => {
-                    chatDomMgr.printOnLogin()
-                    chatDomMgr.printPage()
-                })
+                .then(chatApiMgr.chatMessage())
+            chatDomMgr.printOnLogin()
+            chatDomMgr.printPage()
         }
     }
 }

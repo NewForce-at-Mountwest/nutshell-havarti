@@ -43,6 +43,7 @@ document.querySelector("#news-container").addEventListener("click", () => {
 //send button handler to print each message upon click
 
 document.querySelector("body").addEventListener("click", chatEvents.sendBtnHandler)
+
 // save newly edited news article to json server
 document.querySelector("#news-container").addEventListener("click", () => {
     if (event.target.id.includes("news-editArticle-btn")) (newsEventHandler.putEditedArticleHandler())
@@ -53,6 +54,8 @@ document.querySelector("body").addEventListener("click", chatEvents.deleteMsgHan
 
 // edit button for chat messages showing the edit chat field on click
 document.querySelector("body").addEventListener("click", chatEvents.editChatHandler)
+// save button for changes made to single message
+document.querySelector("body").addEventListener("click", chatEvents.editChatSaveHandler)
 // bring up register new user form
 document.querySelector("#user-registration").addEventListener("click", userEventHandler.registerHandler)
 // save a new registered user
@@ -63,3 +66,4 @@ document.querySelector("body").addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("logout")) (userEventHandler.logout())
 })
+

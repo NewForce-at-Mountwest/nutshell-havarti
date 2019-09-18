@@ -6,6 +6,10 @@ const chatApiMgr = {
         return fetch("http://localhost:8088/chats")
             .then(response => response.json())
     },
+    getOneMessage: (id)=> {
+        return fetch(`http://localhost:8088/chats/${id}`)
+        .then(response=>response.json())
+    },
     //method to get all messages from the chatApi
     getAllMessages: () => {
         return fetch("http://localhost:8088/chats")
@@ -34,9 +38,9 @@ const chatApiMgr = {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(chatEditObject)
-        });
+        })
     }
 
-}
+};
 
 export default chatApiMgr
