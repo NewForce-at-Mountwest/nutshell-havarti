@@ -9,9 +9,13 @@ const chatDomMgr = {
         const chatBox = document.querySelector("#chat-container")
         chatApiMgr.chatMessage()
             .then(messageArray => messageArray.forEach(singleMessage => {
+                if (singleMessage.userId === parseInt(localStorage.getItem("userId") )){
                     chatBox.innerHTML += `
-                <p id="one-line">${singleMessage.message}<button id="edit-chat-btn-${singleMessage.id}">Edit</button><button id="delete-chat-btn-${singleMessage.id}">Delete</button></p>
-                `
+                    <p id="one-line">${singleMessage.message}<button id="edit-chat-btn-${singleMessage.id}">Edit</button><button id="delete-chat-btn-${singleMessage.id}">Delete</button></p>
+                    `
+                }else {chatBox.innerHTML += `
+                <p id="one-line">${singleMessage.message}</p>
+                `}
             }))
     },
     //div to print on login holding the chat input field and send btn. created input container for messages

@@ -7,7 +7,7 @@ const chatEvents = {
         if (event.target.id.includes("send-chat-btn")) {
             const messageInput = document.querySelector("#chat-input").value;
             const newMessageObject = {
-                userId: 1,
+                userId: parseInt(localStorage.getItem("userId")),
                 message: messageInput,
             }
 
@@ -52,7 +52,7 @@ const chatEvents = {
             const editMsgId = editArray[3];
             const editedChatInputValue = document.querySelector(`#edit-input-${editMsgId}`).value;
             const editedChatObject = {
-                userId: localStorage.getItem("userId"),
+                userId: parseInt(localStorage.getItem("userId")),
                 message: editedChatInputValue,
             }
             chatApiMgr.editChat(editMsgId, editedChatObject)
