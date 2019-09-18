@@ -12,18 +12,24 @@ const userEventHandler = {
         // collect username input value and password value at the click
         userApi.getOneUserByUsername(userNameValue).then(user => {
             console.log(user[0].username)
-            localStorage.setItem("userId",user[0].id)
-            document.querySelector("h1").innerHTML = ""
-            document.querySelector("#credential-container").innerHTML = ""
-            document.querySelector("h2").innerHTML = `<p>Welcome to Nutshell, ${user[0].username}</p> <button id="logout">Logout</button>`
-            taskDomMgr.buildCreateTask()
-            taskDomMgr.printAllTasks()
-            newsDomMgr.printPage()
-            chatDomMgr.printPage()
+            console.log(user[0].password, passwordValue);
+            if (user[0].password === passwordValue) {
+                localStorage.setItem("userId", user[0].id)
+                document.querySelector("h1").innerHTML = ""
+                document.querySelector("#credential-container").innerHTML = ""
+                document.querySelector("h2").innerHTML = `<p>Welcome to Nutshell, ${user[0].username}</p> <button id="logout">Logout</button>`
+                taskDomMgr.buildCreateTask()
+                taskDomMgr.printAllTasks()
+                newsDomMgr.printPage()
+                chatDomMgr.printPage()
+            } else {
+                // Error handling would go here
+                alert("Incorrect password");
+            }
         })
     },
     clearRegDom: () => {
-        document.querySelector("#registerForm").innerHTML =""
+        document.querySelector("#registerForm").innerHTML = ""
     },
     registerHandler: () => {
         document.querySelector("#credential-container").innerHTML = "<h3>Register your Nutshell account here!</h3>"
