@@ -3,7 +3,7 @@
 const chatApiMgr = {
     //fetch function to add input value of chat-input to the api under /chats.messages
     chatMessage: () => {
-        return fetch("http://localhost:8088/chats")
+        return fetch("http://localhost:8088/chats?_expand=user")
             .then(response => response.json())
     },
     getOneMessage: (id)=> {

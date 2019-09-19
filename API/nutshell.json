@@ -339,31 +339,6 @@
   ],
   "chats": [
     {
-      "userId": null,
-      "message": "red pandaefefef",
-      "id": 11
-    },
-    {
-      "userId": null,
-      "message": "monkey",
-      "id": 12
-    },
-    {
-      "userId": null,
-      "message": "rogers",
-      "id": 13
-    },
-    {
-      "userId": null,
-      "message": "harry",
-      "id": 14
-    },
-    {
-      "userId": null,
-      "message": "great weathe",
-      "id": 22
-    },
-    {
       "userId": 1,
       "message": "yo",
       "id": 23
@@ -407,6 +382,16 @@
       "userId": 11,
       "message": "bye",
       "id": 32
+    },
+    {
+      "userId": 11,
+      "message": "this is a test",
+      "id": 33
+    },
+    {
+      "userId": 11,
+      "message": "butter",
+      "id": 34
     }
   ]
 }
