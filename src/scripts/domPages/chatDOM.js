@@ -11,10 +11,10 @@ const chatDomMgr = {
             .then(messageArray => messageArray.forEach(singleMessage => {
                 if (singleMessage.userId === parseInt(localStorage.getItem("userId") )){
                     chatBox.innerHTML += `
-                    <p id="one-line"> ${xxx}: ${singleMessage.message}<button id="edit-chat-btn-${singleMessage.id}">Edit</button><button id="delete-chat-btn-${singleMessage.id}">Delete</button></p>
+                    <p id="one-line">${singleMessage.user.username}: ${singleMessage.message}<button id="edit-chat-btn-${singleMessage.id}">Edit</button><button id="delete-chat-btn-${singleMessage.id}">Delete</button></p>
                     `
                 }else {chatBox.innerHTML += `
-                <p id="one-line">${xxx}: ${singleMessage.message}</p>
+                <p id="one-line">${singleMessage.user.username}: ${singleMessage.message}</p>
                 `}
             }))
     },
